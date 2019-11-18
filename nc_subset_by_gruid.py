@@ -1,7 +1,6 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# Script to subset a netcdf file based on a list of 
-# IDs
+# Script to subset a netcdf file based on a list of HUC ids.
+# Modified based on Bart's script at https://github.com/bartnijssen/large_scale_utils.git/utils/nc_subset_by_id.py
 
 import argparse
 from datetime import datetime
