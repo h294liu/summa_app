@@ -1,0 +1,7 @@
+#basin__aquiferBaseflowExp,basin__aquiferHydCond,basin__aquiferScaleFactor,routingGammaScale,routingGammaShape,
+basin__aquiferBaseflowExp
+basin__aquiferHydCond
+basin__aquiferScaleFactor
+routingGammaScale
+routingGammaShape
+ 
