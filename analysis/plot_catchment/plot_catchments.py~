@@ -1,0 +1,24 @@
+import sys
+import numpy as np
+#sys.path.append('/glade/u/home/eriddle/hydrosos/utils/')
+sys.path.append('/glade/u/home/andywood/proj/jtti/scripts/analysis/utils/')
+sys.path.append('/glade/work/eriddle/python_eriddle/lib/python2.7/site-packages/')
+import plotting_utils
+import Nio
+import pdb
+
+basedir='/glade/work/andywood/hydrosos/data/from_lc/model_run_19810101_20151231/'
+#shapedir='/glade/work/andywood/hydrosos/data/from_lc/shapefile/'
+shapedir='/glade/work/andywood/hydrosos/data/gis/shapes/'
+files=['timeCPRC']
+#shpname=shapedir+'SUBID_WWH_1_0_1_WHISTv18_simpl180m_ForVisOnly.shp'
+shpname=shapedir+'SUBID_WWH_1_0_1_WHISTv18_simpl_AW1.shp'
+joinid_index=0
+
+for file in files:
+    f=Nio.open_file(basedir+file+'.txt.nc')
+    datacid=f.variables['subid'][:]
+    data=f.variables[file][0,:]
+    fn=file+'_lowres.png'
+    maxcolorval=np.max(data)/10
+    plotting_utils.catchment_plot(data,datacid,shpname,joinid_index,fn,maxcolorval)

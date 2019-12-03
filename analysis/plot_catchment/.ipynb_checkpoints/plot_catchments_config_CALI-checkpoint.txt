@@ -1,0 +1,14 @@
+! ==== file paths =====
+/glade/u/home/andywood/proj/SHARP/wreg/WORK/gis/shapes/cali_huc12/CALI_huc12_v5.shp			!shapefile path
+/glade/u/home/andywood/proj/SHARP/wreg/cali_huc12/output/3hr/cali_huc12.3hr.merged.nc       !netcdf path
+/glade/u/home/hongli/github/summa_mizuroute_app/analysis/plot_catchment/plot_CALI           !output directory
+
+! ==== plot settings ====
+airtemp_mean			! variable names in netcdf
+1990-12-31 03:00:00		! plot start time
+1990-12-31 03:00:00		! plot end time
+
+! ==== background shapefile paths =====
+/glade/p/ral/hap/common_data/GMT/GSHHS_shp/i/GSHHS_i_L1.shp           !GSHHS_shp coastlines path
+/glade/p/ral/hap/common_data/GMT/WDBII_shp/i/WDBII_border_i_L1.shp    !WDBII_shp country border path
+/glade/p/ral/hap/common_data/GMT/WDBII_shp/i/WDBII_border_i_L2.shp    !WDBII_shp state border path
