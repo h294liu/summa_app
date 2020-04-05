@@ -1,0 +1,15 @@
+! Delimitor "|" must be present.
+! Columes are:
+! 1: parameter name in TrialParam.nc
+! 2: parameter value string in ostIn.txt 
+! =================================================
+k_macropore			|    1.0000
+k_soil				|    1.0000
+theta_sat			|    1.0000
+aquiferBaseflowExp	| aquiferBaseflowExp_mtp
+aquiferBaseflowRate		| aquiferBaseflowRate_mtp
+qSurfScale			|    1.0000
+summerLAI			|    1.0000
+frozenPrecipMultip 		|    1.0000
+heightCanopyBottom 		|    1.0000
+heightCanopyTop 		|    1.0000

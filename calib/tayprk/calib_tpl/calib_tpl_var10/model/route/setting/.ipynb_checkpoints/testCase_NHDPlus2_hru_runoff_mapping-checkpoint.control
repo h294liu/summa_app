@@ -1,0 +1,85 @@
+! ****************************************************************************************************************************
+! ***** DEFINITION OF MODEL CONTROL INFORMATION ******************************************************************************
+! ****************************************************************************************************************************
+! ****************************************************************************************************************************
+! Note: lines starting with "!" are treated as comment lines -- there is no limit on the number of comment lines.
+!    lines starting with <xxx> are read till "!" 
+!
+! ****************************************************************************************************************************
+! DEFINE DIRECTORIES 
+! --------------------------
+<ancil_dir>            ./ancillary_data/                             ! directory containing ancillary data (river segment data, 
+<input_dir>            ./input/                                      ! directory containing input data
+<output_dir>           ./output/                                     ! directory containing output data
+! ****************************************************************************************************************************
+! PART 2: DEFINE TIME PERIOD OF THE SIMULATION
+! --------------------------------------------
+<sim_start>            2008-10-02 00:00:00                           ! time of simulation start (year-month-day)
+<sim_end>              2018-09-30 00:00:00                           ! time of simulation end (year-month-day)
+! ****************************************************************************************************************************
+! DEFINE FINE NAME AND DIMENSIONS
+! ---------------------------------------
+!<fname_ntopOld>        nhdplus2_conus_river_network.nc               ! name of netCDF containing river segment data 
+!<dname_sseg>           linkDim                                       ! dimension name of the stream segments
+<dname_nhru>           hru                                           ! dimension name of the HRUs
+<fname_ntopOld>        tayprk_RouteLink__plusHRUs.nc                             ! name of netCDF containing river segment data 
+<dname_sseg>           seg                                           ! dimension name of the stream segments
+! ****************************************************************************************************************************
+! PART 3: DEFINE DESIRED VARIABLES FOR THE NETWORK TOPOLOGY
+! ---------------------------------------------------------
+<seg_outlet>           -9999                                         ! seg_id of outlet streamflow segment -9999 for all segments 
+!<seg_outlet>           17906875                                       ! seg_id of outlet streamflow segment -9999 for all segments 
+! ****************************************************************************************************************************
+! DEFINE RUNOFF FILE
+! ----------------------------------
+!<fname_qsim>           upco_huc12.3hr.runoff.nc                      ! name of netCDF containing the HRU runoff
+<fname_qsim>           temp.nc                                    ! name of netCDF containing the HRU runoff
+<vname_qsim>           scalarTotalRunoff_mean                        ! name of HRU runoff variable
+<vname_time>           time                                          ! name of time variable in the runoff file
+<vname_hruid>          hruId                                         ! name of runoff HRU id variable
+<dname_time>           time                                          ! name of time dimension 
+<dname_hruid>          hru                                           ! name of the HRU dimension 
+<units_qsim>           m/s                                          ! units of runoff
+!<dt_qsim>              10800                                         ! time interval of the runoff in second
+<dt_qsim>              86400                                         ! time interval of the runoff in second
+! ****************************************************************************************************************************
+! DEFINE RUNOFF MAPPING FILE 
+! ----------------------------------
+<is_remap>              T                                            ! logical whether or not runnoff needs to be mapped to river network HRU 
+<fname_remap>           spatialweights_huc12_to_nhdplus-ucoplus.nc   ! name of netCDF containing poly-poly mapping data 
+<vname_hruid_in_remap>  polyid                                       ! name of variable contating areal weights of runoff HRUs within each river network HRU 
+<vname_weight>          weight                                       ! name of variable contating areal weights of runoff HRUs within each river network HRU 
+<vname_qhruid>          intersector                                  ! name of variable containing ID of runoff HRU 
+<vname_num_qhru>        overlaps                                     ! name of variable containing numbers of runoff HRUs within each river network HRU 
+<dname_hru_remap>       polyid                                       ! name of hru dimension name 
+<dname_data_remap>      data                                         ! name of data dimension name 
+! ****************************************************************************************************************************
+! DEFINE RUN CONTROL 
+! ---------------------------
+<restart_opt>           F                                            ! option to use saved flow states T->yes, F->No (start with empty channels) 
+<route_opt>             1                                            ! option for routing schemes 0-> both, 1->IRF, 2->KWT otherwise error 
+! ****************************************************************************************************************************
+! DEFINE OUTPUT FILE
+! ---------------------------
+<fname_output>          test                                         ! filename for the model output 1730
+<fname_state_in>        test.state.nc                                ! filename for the channel states 
+<fname_state_out>       test.state.nc                                ! filename for the channel states 
+<newFileFrequency>      annual                                       ! output frequency
+! ****************************************************************************************************************************
+! Namelist file name 
+! ---------------------------
+<param_nml>             param.nml.default                            ! namelist parameters  
+! ****************************************************************************************************************************
+! Dictionary to map variable names
+! ---------------------------
+<varname_area>          HRU_AREA                                     ! name of variable holding hru area
+<varname_length>        Length                                       ! name of variable holding segment length
+<varname_slope>         So                                           ! name of variable holding segment slope
+<varname_HRUid>         idFeature                                    ! name of variable holding HRU id
+<varname_hruSegId>      hru2seg                                      ! name of variable holding the stream segment below each HRU  
+<varname_segId>         link                                         ! name of variable holding the ID of each stream segment  
+<varname_downSegId>     to                                           ! name of variable holding the ID of the next downstream segment
+!<varname_pfafCode>      pCode                                        ! name of variable holding the pfafstetter code 
+! ****************************************************************************************************************************
+! ****************************************************************************************************************************
+! ****************************************************************************************************************************

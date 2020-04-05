@@ -1,0 +1,17 @@
+#!/bin/tcsh
+# submit with: qsub [this_file]
+
+#PBS -N run_summa
+#PBS -A P48500028
+#PBS -q premium
+#PBS -l select=2:ncpus=36:mpiprocs=36
+#PBS -l walltime=03:00:00
+#PBS -m abe
+#PBS -M hongli@ucar.edu
+
+setenv TmpDir /glade/scratch/hongli/temp
+mkdir -p $TmpDir
+
+### Run the executable
+setenv MPI_SHEPHERD true
+mpiexec_mpt launch_cf.sh /glade/u/home/hongli/work/sharp/basins/upco_huc12/run/joblist.run_summa.3hr.txt

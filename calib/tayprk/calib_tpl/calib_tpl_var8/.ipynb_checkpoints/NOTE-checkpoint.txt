@@ -1,0 +1,8 @@
+To repeat this calibration somewhere else, users must change paths or names of the following files.
+1. qsub_DDS.sh: change job name to distinguish from other jobs in job status check (qstat).
+2. concat.py
+3. step0_define_mtp_bound.py
+4. step1_replace_nc_param.py
+5. step2_run_summa_route.sh
+6. step3_diagnostics.py
+7. model/settings/fileManager.3hr.txt

@@ -1,0 +1,27 @@
+'SUMMA_FILE_MANAGER_V1.0'             ! file manager version (defined string)
+!
+! ==== file paths ====
+'/glade/u/home/andywood/proj/SHARP/wreg/upco_huc12/settings/'                 ! setting path
+!'/glade/u/home/andywood/proj/SHARP/wreg/upco_huc12/forcings/gmet_huc12_3hr_summa/'  ! forcing path
+'/glade/u/home/andywood/proj/SHARP/wreg/upco_huc12/forcings/gmet_huc12_3hr_summa2/'  ! forcing path
+'./'
+!
+! ==== static input files ====
+! order is fixed?
+'modelDecisions.v1.txt'                  ! model decision file
+[notUsed]                             ! [notUsed] meta_time
+[notUsed]                             ! [notUsed] meta_attr
+[notUsed]                             ! [notUsed] meta_type
+[notUsed]                             ! [notUsed] meta_force
+[notUsed]                             ! [notUsed] meta_localpar
+'outputControl.wb.txt'                ! output control specs
+[notUsed]                             ! [not used] meta_index
+[notUsed]                             ! [not used] meta_basinpar
+[notUsed]                             ! [not used] meta_basinvar
+'attributes.UPCO_huc12.nc'            ! local attributes
+'localParams.v1.txt'                  ! local parameters
+'basinParams.v1.txt'                  ! basin parameters
+'forcingFileList.3hr.txt'             ! forcing file list
+'coldState.UPCO_huc12_3hr.v1.nc'      ! initial conditions
+'trialParams.UPCO_huc12_3hr.v1.nc'    ! trial parameters
+'output'                              ! output_prefix ('_' appended)

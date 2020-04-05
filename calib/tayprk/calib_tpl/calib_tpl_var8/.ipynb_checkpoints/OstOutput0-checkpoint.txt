@@ -1,0 +1,47 @@
+--------------------------------------------------------------------------
+ OSTRICH version 19.10.10 (Built Oct 10 2019 @ 15:54:12)
+
+ A computer program for model-independent calibration and optimization.
+
+ Author             L. Shawn Matott
+ Copyright (C) 2007 L. Shawn Matott
+
+ This program is free software; you can redistribute 
+ it and/or modify it under the terms of the GNU  
+ General Public License as published by the Free 
+ Software Foundation; either version 2 of the 
+ License, or(at your option) any later version. 
+
+ This program is distributed in the hope that it will 
+ be useful, but WITHOUT ANY WARRANTY; without even 
+ the implied warranty of MERCHANTABILITY or FITNESS 
+ FOR A PARTICULAR PURPOSE. See the GNU General Public 
+ License for more details. 
+
+ You should have received a copy of the GNU General 
+ Public License along with this program; if not, 
+ write to the Free Software Foundation, Inc., 59 
+ Temple Place, Suite 330, Boston, MA 02111-1307 USA 
+--------------------------------------------------------------------------
+
+Ostrich Setup
+Model                  : ./run_model.sh > OstExeOut.txt 2>&1
+Algorithm              : Dynamically Dimensioned Search Algorithm (DDS)
+Objective Function     : GCOP
+Number of Parameters   : 8
+Number of Tied Params  : 0
+Number of Observations : 0
+Seed for Random Nums.  : 1575495365
+Number of Resp. Vars        : 1
+Number of Tied Resp. Vars   : 1
+Number of Constraints       : 0
+Penalty Method              : Additive Penalty Method (APM)
+
+Ostrich Run Record
+trial    best fitness   k_macropore_mtp  k_soil_mtp    theta_sat_mtp  basin__aquiferBaseflowExp_mtp  basin__aquiferHydCond_mtp  qSurfScale_mtp  summerLAI_mtp  frozenPrecipMultip_mtp   trials remaining
+1     -3.193764E+01  1.000000E+00  1.000000E+00  1.000000E+00  1.000000E+00  1.000000E+00  1.000000E+00  1.000000E+00  1.000000E+00  4.000000E+00
+2     -3.193764E+01  1.809831E+02  3.402479E+00  1.111134E+00  1.171266E+00  5.366937E+01  8.280430E-01  1.178713E+00  1.138289E+00  3.000000E+00
+3     -3.193764E+01  1.171991E+02  3.402479E+00  1.273488E+00  1.657858E+00  5.366937E+01  8.280430E-01  1.178713E+00  1.163533E+00  2.000000E+00
+4     -3.193764E+01  1.171991E+02  3.402479E+00  1.273488E+00  1.650701E+00  5.366937E+01  8.081940E-01  1.178713E+00  1.163533E+00  1.000000E+00
+5     -3.193764E+01  2.028207E+02  3.402479E+00  1.273488E+00  1.650701E+00  5.366937E+01  8.081940E-01  1.178713E+00  1.163533E+00  0.000000E+00
+5     -3.193764E+01  2.028207E+02  3.402479E+00  1.273488E+00  1.650701E+00  5.366937E+01  8.081940E-01  1.178713E+00  1.163533E+00  0.000000E+00

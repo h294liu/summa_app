@@ -1,0 +1,40 @@
+To repeat this calibration somewhere else, users must change paths or names of the following files.
+1. qsub_DDS.sh: change job name to distinguish from other jobs in job status check (qstat).
+2. concat.py
+3. step0_define_mtp_bound.py
+4. step1_replace_nc_param.py
+5. step2_run_summa_route.sh
+6. step3_diagnostics.py
+7. model/settings/fileManager.3hr.txt
+
+Changes made on March 30, 2020 as required by Andy Wood:
+1. Change the albedoMax value to 0.84.
+Solution: ncap2 -s 'albedoMax(:)={0.84,0.84,0.84}' trialParams.model_huc12_3hr.v1.nc_pattern trialParams.model_huc12_3hr.v1.nc_pattern_update
+rm trialParams.model_huc12_3hr.v1.nc_pattern_update*
+
+2. Change the model decision for LAI method from 'monTable' to 'specified'. 
+Solution: manually change model/settings/modelDecisions.v1.txt.
+
+3. Change the aquiferScale parameter to 1.5.
+Solution: ncap2 -s 'aquiferScaleFactor(:)={1.5,1.5,1.5}' trialParams.model_huc12_3hr.v1.nc_pattern_update trialParams.model_huc12_3hr.v1.nc_pattern_update2
+
+mv trialParams.model_huc12_3hr.v1.nc_pattern_update2 trialParams.model_huc12_3hr.v1.nc_pattern
+
+4. Change the cold state soil depths/heights to 0.1, 0.4 and 1.0; and 0, 0.1, 0.5 and 1.5, respectively. 
+Solution: ncap2 -s 'where(mLayerDepth == 0.3) mLayerDepth=0.4' coldState.model_huc12_3hr.v1.nc coldState.model_huc12_3hr.v1.nc_update1
+
+ncap2 -s 'where(mLayerDepth == 0.6) mLayerDepth=1.0' coldState.model_huc12_3hr.v1.nc_update1 coldState.model_huc12_3hr.v1.nc_update2
+
+mv coldState.model_huc12_3hr.v1.nc_update2 coldState.model_huc12_3hr.v1.nc
+rm coldState.model_huc12_3hr.v1.nc_update*
+
+ncap2 -s 'where(iLayerHeight == 0.4) iLayerHeight=0.5' coldState.model_huc12_3hr.v1.nc coldState.model_huc12_3hr.v1.nc_update1
+
+mv coldState.model_huc12_3hr.v1.nc_update2 coldState.model_huc12_3hr.v1.nc
+rm coldState.model_huc12_3hr.v1.nc_update*
+
+5. To make the runs go faster, you could also remove all the outputs being written except for total runoff, which is used by the routing model. 
+Soulution: manually change /glade/u/home/hongli/work/sharp/basins/sources/outputControl.wb_24hr.txt
+
+6. Add two MPTABLE.TBL variables to trialParams.nc
+Soulution: ncap2 -s 'heightCanopyBottom=summerLAI*0+0.1;heightCanopyTop=summerLAI*0+1.0' trialParams.model_huc12_3hr.v1.nc_pattern_origin trialParams.model_huc12_3hr.v1.nc_pattern

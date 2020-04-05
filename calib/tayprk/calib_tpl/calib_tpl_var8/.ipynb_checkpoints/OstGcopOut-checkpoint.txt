@@ -1,0 +1,2 @@
+True Cost 	Penalty 	Adjusted Cost
+-3.193764E+01	0.000000E+00	-3.193764E+01

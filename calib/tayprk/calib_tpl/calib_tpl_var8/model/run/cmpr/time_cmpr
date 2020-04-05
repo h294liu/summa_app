@@ -1,0 +1,97 @@
+initial date/time = 2019-08-30  17:06:50.585
+  final date/time = 2019-08-30  17:06:55.587
+
+     elapsed init =   0.1070000     s
+    fraction init =   2.1391443E-02
+
+    elapsed setup =    1.582000     s
+   fraction setup =   0.3162735    
+
+  elapsed restart =   5.0000000E-03 s
+ fraction restart =   9.9960016E-04
+
+     elapsed read =   0.2050000     s
+    fraction read =   4.0983607E-02
+
+    elapsed write =   0.1030000     s
+   fraction write =   2.0591763E-02
+
+  elapsed physics =    2.979000     s
+ fraction physics =   0.5955618    
+
+     elapsed time =    5.002000     s
+       or             8.3366667E-02 m
+       or             1.3894444E-03 h
+       or             5.7893519E-05 d
+
+   number threads =          1
+
+ FORTRAN STOP: finished simulation successfully.
+3.155u 0.139s 0:05.20 63.0%	0+0k 0+0io 0pf+0w
+
+
+initial date/time = 2019-08-30  17:08:03.331
+  final date/time = 2019-08-30  17:08:07.837
+
+     elapsed init =   1.6000000E-02 s
+    fraction init =   3.5508211E-03
+
+    elapsed setup =    1.472000     s
+   fraction setup =   0.3266755    
+
+  elapsed restart =   8.0000000E-03 s
+ fraction restart =   1.7754106E-03
+
+     elapsed read =   0.2140000     s
+    fraction read =   4.7492233E-02
+
+    elapsed write =   0.1010000     s
+   fraction write =   2.2414558E-02
+
+  elapsed physics =    2.674000     s
+ fraction physics =   0.5934310    
+
+     elapsed time =    4.506000     s
+       or             7.5100000E-02 m
+       or             1.2516667E-03 h
+       or             5.2152778E-05 d
+
+   number threads =          1
+
+ FORTRAN STOP: finished simulation successfully.
+2.899u 0.126s 0:04.57 65.8%	0+0k 0+0io 0pf+0w
+
+
+initial date/time = 2019-08-30  17:10:04.577
+  final date/time = 2019-08-30  17:10:08.841
+
+     elapsed init =   5.1000000E-02 s
+    fraction init =   1.1960600E-02
+
+    elapsed setup =    1.196000     s
+   fraction setup =   0.2804878    
+
+  elapsed restart =   6.0000000E-03 s
+ fraction restart =   1.4071295E-03
+
+     elapsed read =   0.2040000     s
+    fraction read =   4.7842402E-02
+
+    elapsed write =   0.1010000     s
+   fraction write =   2.3686679E-02
+
+  elapsed physics =    2.684000     s
+ fraction physics =   0.6294559    
+
+     elapsed time =    4.264000     s
+       or             7.1066667E-02 m
+       or             1.1844444E-03 h
+       or             4.9351852E-05 d
+
+   number threads =          1
+
+ FORTRAN STOP: finished simulation successfully.
+2.882u 0.107s 0:04.35 68.5%	0+0k 0+0io 0pf+0w
+
+
+

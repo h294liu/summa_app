@@ -1,0 +1,1 @@
+../settings/fileManager.3hr.txt
